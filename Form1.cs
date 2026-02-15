@@ -76,5 +76,47 @@ namespace Dialogs
                 MessageBox.Show("The saving path is: " + saveFileDialog1.FileName);
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = @"c:\C:\Users\carlos_costa\Downlaoads";
+            openFileDialog1.DefaultExt = "txt";
+            openFileDialog1.Filter = "txt files (*.txt)|*.txt|all files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 2;
+
+            if (MessageBox.Show("Do you want to select multiple files?", "Multi option",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                openFileDialog1.Title = "Multi open from ";
+                openFileDialog1.Multiselect = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    foreach (string file in openFileDialog1.FileNames)
+                    {
+
+                        MessageBox.Show(file);
+
+                    }
+                }
+            }
+            else {
+                openFileDialog1.Title = "Single open from ";
+                openFileDialog1.Multiselect = false;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+
+
+                        MessageBox.Show(openFileDialog1.FileName);
+
+                    
+                }
+
+
+
+            }
+
+        }
     }
 }
