@@ -118,5 +118,15 @@ namespace Dialogs
             }
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.ShowNewFolderButton = true;
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK) {
+
+                MessageBox.Show(folderBrowserDialog1.SelectedPath);
+            
+            }
+        }
     }
 }
