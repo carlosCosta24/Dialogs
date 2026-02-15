@@ -41,9 +41,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -117,6 +121,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button4);
+            this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(608, 292);
@@ -162,6 +168,30 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // fontDialog1
+            // 
+            this.fontDialog1.Apply += new System.EventHandler(this.fontDialog1_Apply);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(225, 122);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(152, 39);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Save file";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(206, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(190, 32);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Click To save ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -175,6 +205,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -194,6 +226,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

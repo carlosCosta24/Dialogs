@@ -45,12 +45,35 @@ namespace Dialogs
 
         private void button3_Click(object sender, EventArgs e)
         {
-                fontDialog1.ShowEffects = true;
-                fontDialog1.ShowApply = true;   
+            fontDialog1.ShowColor = true;
+            fontDialog1.ShowEffects = true;
+            fontDialog1.ShowApply = true;
+            fontDialog1.Font = label2.Font;
             if (fontDialog1.ShowDialog() == DialogResult.OK) {
 
 
                 label2.Font = fontDialog1.Font;
+                label2.ForeColor = fontDialog1.Color;
+            }
+        }
+
+        private void fontDialog1_Apply(object sender, EventArgs e)
+        {
+            label2.Font = fontDialog1.Font;
+            label2.ForeColor = fontDialog1.Color;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.InitialDirectory = @"c:\C:\Users\carlos_costa\Downlaoads";
+            saveFileDialog1.Title = "Save to ";
+            saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|all files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK) {
+
+                MessageBox.Show("The saving path is: " + saveFileDialog1.FileName);
             }
         }
     }
